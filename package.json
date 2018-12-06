@@ -1,18 +1,51 @@
 {
   "name": "@polats/forge",
-  "version": "0.3.0",
   "description": "Command-line NPM package for creating cryptoitems",
+  "version": "0.3.0",
+  "author": "Paul Gadi @polats",
   "bin": {
-    "ci-create": "./create.js"
+    "forge": "./bin/run"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/polats/forge"
-  },
-  "homepage": "https://github.com/polats/forge",
-  "bugs": "https://github.com/polats/forge",
+  "bugs": "https://github.com/polats/forge/issues",
   "dependencies": {
+    "@oclif/command": "^1.5.6",
+    "@oclif/config": "^1.9.0",
+    "@oclif/plugin-help": "^2.1.4",
     "web3": "^1.0.0-beta.36",
     "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.19.5",
+    "globby": "^8.0.1",
+    "rimraf": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/polats/forge",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "forge",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "polats/forge",
+  "scripts": {
+    "postpack": "rimraf oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
   }
 }

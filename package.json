@@ -4,5 +4,14 @@
   "description": "Command-line NPM package for creating cryptoitems",
   "bin": {
     "ci-create": "./create.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/polats/forge"
+  },
+  "homepage": "https://github.com/polats/forge",
+  "bugs": "https://github.com/polats/forge",
+  "dependencies": {
+    "web3": "^1.0.0-beta.36"
   }
 }

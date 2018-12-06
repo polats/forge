@@ -7,7 +7,7 @@ Command-line NPM package for creating cryptoitems
 ## Install
 
 ```
-$ npm install @polats/forge
+$ npm install -g @polats/forge
 ```
 
 ## Usage

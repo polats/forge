@@ -1,7 +1,7 @@
 {
   "name": "@polats/forge",
   "description": "Command-line NPM package for creating cryptoitems",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Paul Gadi @polats",
   "bin": {
     "forge": "./bin/run"

@@ -19,7 +19,7 @@ $ npm install -g @polats/forge
 $ forge COMMAND
 running command...
 $ forge (-v|--version|version)
-@polats/forge/0.3.0 win32-x64 node-v8.12.0
+@polats/forge/0.3.1 win32-x64 node-v8.12.0
 $ forge --help [COMMAND]
 USAGE
   $ forge COMMAND
@@ -47,7 +47,7 @@ DESCRIPTION
   Extra documentation goes here
 ```
 
-_See code: [src\commands\hello.js](https://github.com/polats/forge/blob/v0.3.0/src\commands\hello.js)_
+_See code: [src\commands\hello.js](https://github.com/polats/forge/blob/v0.3.1/src\commands\hello.js)_
 
 ## `forge help [COMMAND]`
 

@@ -12,6 +12,7 @@
   "homepage": "https://github.com/polats/forge",
   "bugs": "https://github.com/polats/forge",
   "dependencies": {
-    "web3": "^1.0.0-beta.36"
+    "web3": "^1.0.0-beta.36",
+    "dotenv": "^6.2.0"
   }
 }

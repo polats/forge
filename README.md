@@ -22,7 +22,7 @@ $ npm install -g @polats/forge
 $ forge COMMAND
 running command...
 $ forge (-v|--version|version)
-@polats/forge/0.3.1 win32-x64 node-v8.12.0
+@polats/forge/0.3.2 win32-x64 node-v8.12.0
 $ forge --help [COMMAND]
 USAGE
   $ forge COMMAND
@@ -31,16 +31,18 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`forge hello [FILE]`](#forge-hello-file)
+* [`forge create [FILE]`](#forge-create-file)
+* [`forge hello`](#forge-hello)
 * [`forge help [COMMAND]`](#forge-help-command)
+* [`forge init [FILE]`](#forge-init-file)
 
-## `forge hello [FILE]`
+## `forge create [FILE]`
 
-describe the command here
+Create a cryptoitem with the given parameters
 
 ```
 USAGE
-  $ forge hello [FILE]
+  $ forge create [FILE]
 
 OPTIONS
   -f, --force
@@ -48,11 +50,27 @@ OPTIONS
   -n, --name=name  name to print
 
 EXAMPLE
-  $ forge hello
+  $ forge create
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.ts](https://github.com/polats/forge/blob/v0.3.1/src\commands\hello.ts)_
+_See code: [src\commands\create.ts](https://github.com/polats/forge/blob/v0.3.2/src\commands\create.ts)_
+
+## `forge hello`
+
+Describe the command here
+
+```
+USAGE
+  $ forge hello
+
+OPTIONS
+  -n, --name=name  name to print
+
+DESCRIPTION
+  ...
+  Extra documentation goes here
+```
 
 ## `forge help [COMMAND]`
 
@@ -70,4 +88,24 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.1.4/src\commands\help.ts)_
+
+## `forge init [FILE]`
+
+Initializes the needed variables such as URLs and API keys
+
+```
+USAGE
+  $ forge init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ forge create
+  hello world from ./src/hello.ts!
+```
+
+_See code: [src\commands\init.ts](https://github.com/polats/forge/blob/v0.3.2/src\commands\init.ts)_
 <!-- commandsstop -->

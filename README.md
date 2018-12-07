@@ -1,10 +1,13 @@
 @polats/forge
 =============
 
-Command-line NPM package for creating cryptoitems
+Command-line Crypto
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@polats/forge.svg)](https://npmjs.org/package/@polats/forge)
+[![CircleCI](https://circleci.com/gh/polats/forge/tree/master.svg?style=shield)](https://circleci.com/gh/polats/forge/tree/master)
+[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/polats/forge?branch=master&svg=true)](https://ci.appveyor.com/project/polats/forge/branch/master)
+[![Codecov](https://codecov.io/gh/polats/forge/branch/master/graph/badge.svg)](https://codecov.io/gh/polats/forge)
 [![Downloads/week](https://img.shields.io/npm/dw/@polats/forge.svg)](https://npmjs.org/package/@polats/forge)
 [![License](https://img.shields.io/npm/l/@polats/forge.svg)](https://github.com/polats/forge/blob/master/package.json)
 
@@ -28,26 +31,28 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`forge hello`](#forge-hello)
+* [`forge hello [FILE]`](#forge-hello-file)
 * [`forge help [COMMAND]`](#forge-help-command)
 
-## `forge hello`
+## `forge hello [FILE]`
 
-Describe the command here
+describe the command here
 
 ```
 USAGE
-  $ forge hello
+  $ forge hello [FILE]
 
 OPTIONS
+  -f, --force
+  -h, --help       show CLI help
   -n, --name=name  name to print
 
-DESCRIPTION
-  ...
-  Extra documentation goes here
+EXAMPLE
+  $ forge hello
+  hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\hello.js](https://github.com/polats/forge/blob/v0.3.1/src\commands\hello.js)_
+_See code: [src\commands\hello.ts](https://github.com/polats/forge/blob/v0.3.1/src\commands\hello.ts)_
 
 ## `forge help [COMMAND]`
 

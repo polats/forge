@@ -10,6 +10,7 @@ class HelloCommand extends Command {
     const figlet      = require('figlet');
     const files       = require('../lib/files');
 
+
     this.log(`hello ${name} from .\\src\\commands\\hello.js`)
 
     if (!files.fileExists('.env')) {

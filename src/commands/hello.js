@@ -5,7 +5,17 @@ class HelloCommand extends Command {
   async run() {
     const {flags} = this.parse(HelloCommand)
     const name = flags.name || 'world'
+    const chalk       = require('chalk');
+    const clear       = require('clear');
+    const figlet      = require('figlet');
+    const files       = require('../lib/files');
+
     this.log(`hello ${name} from .\\src\\commands\\hello.js`)
+
+    if (!files.fileExists('.env')) {
+      console.log(chalk.yellow("Environment file not found, running 'forge init'."));
+      process.exit();
+    }
 
     const Web3 = require('web3')
     const rpcURL = process.env.RPC_SERVER + process.env.INFURA_API_KEY;

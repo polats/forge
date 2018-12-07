@@ -1,7 +1,8 @@
-import {Command, flags} from '@oclif/command'
-require('dotenv').config();
+import Command, {flags} from '@oclif/command'
+import Files from '../files';
+import chalk from 'chalk';
 
-export default class Init extends Command {
+export class Init extends Command {
   static description = 'Initializes the needed variables such as URLs and API keys'
 
   static examples = [
@@ -21,13 +22,7 @@ hello world from ./src/hello.ts!
   static args = [{name: 'file'}]
 
   async run() {
-    const chalk       = require('chalk');
-    const clear       = require('clear');
-    const figlet      = require('figlet');
-    const files       = require('../lib/files');
-
-
-    if (!files.fileExists('.env')) {
+    if (!Files.fileExists('.env')) {
       console.log(chalk.yellow("Environment file not found, running 'forge init'."));
       process.exit();
     }

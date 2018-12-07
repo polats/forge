@@ -1,27 +1,26 @@
-const fs = require('fs');
-const path = require('path');
+import * as fs from 'fs';
+import * as path from 'path';
 
-module.exports = {
-  getCurrentDirectoryBase : () => {
+export default class Files {
+
+   static getCurrentDirectoryBase() {
     return path.basename(process.cwd());
-  },
 
-  fileExists : (filePath) => {
+  }
+
+  static fileExists(filePath : string) {
     try {
       return fs.existsSync(filePath);
     } catch (err) {
       return false;
     }
-  },
+  }
 
-
-  directoryExists : (filePath) => {
+  static directoryExists(filePath : string) {
     try {
       return fs.statSync(filePath).isDirectory();
     } catch (err) {
       return false;
     }
   }
-
-
-};
+}

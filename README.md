@@ -32,7 +32,6 @@ USAGE
 # Commands
 <!-- commands -->
 * [`forge create [FILE]`](#forge-create-file)
-* [`forge hello`](#forge-hello)
 * [`forge help [COMMAND]`](#forge-help-command)
 * [`forge init [FILE]`](#forge-init-file)
 
@@ -55,22 +54,6 @@ EXAMPLE
 ```
 
 _See code: [src\commands\create.ts](https://github.com/polats/forge/blob/v0.3.2/src\commands\create.ts)_
-
-## `forge hello`
-
-Describe the command here
-
-```
-USAGE
-  $ forge hello
-
-OPTIONS
-  -n, --name=name  name to print
-
-DESCRIPTION
-  ...
-  Extra documentation goes here
-```
 
 ## `forge help [COMMAND]`
 

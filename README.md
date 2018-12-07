@@ -22,7 +22,7 @@ $ npm install -g @polats/forge
 $ forge COMMAND
 running command...
 $ forge (-v|--version|version)
-@polats/forge/0.3.3 win32-x64 node-v8.12.0
+@polats/forge/0.3.4 win32-x64 node-v8.12.0
 $ forge --help [COMMAND]
 USAGE
   $ forge COMMAND
@@ -53,7 +53,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\create.ts](https://github.com/polats/forge/blob/v0.3.3/src\commands\create.ts)_
+_See code: [src\commands\create.ts](https://github.com/polats/forge/blob/v0.3.4/src\commands\create.ts)_
 
 ## `forge help [COMMAND]`
 
@@ -90,5 +90,5 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src\commands\init.ts](https://github.com/polats/forge/blob/v0.3.3/src\commands\init.ts)_
+_See code: [src\commands\init.ts](https://github.com/polats/forge/blob/v0.3.4/src\commands\init.ts)_
 <!-- commandsstop -->

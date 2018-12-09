@@ -14,6 +14,9 @@ jobs:
       - run:
           name: Install dependencies
           command: yarn
+      - run:
+          name: chmod permissions
+          command: chmod +x ./bin/run          
       - run: ./bin/run --version
       - run: ./bin/run --help
       - run:

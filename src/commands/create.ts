@@ -1,5 +1,5 @@
 import {Command, flags} from '@oclif/command'
-require('dotenv').config();
+require('dotenv').config()
 
 export default class Create extends Command {
   static description = 'Create a cryptoitem with the given parameters'
@@ -22,13 +22,18 @@ hello world from ./src/hello.ts!
 
   async run() {
     const Web3 = require('web3')
-    const rpcURL = (process.env.RPC_SERVER as string) + process.env.INFURA_API_KEY;
-    const web3 = new Web3(rpcURL);
-    const address = process.env.USER_ADDRESS;
+    const rpcURL = (process.env.RPC_SERVER as string) + process.env.INFURA_API_KEY
+    const web3 = new Web3(rpcURL)
+    const address = process.env.USER_ADDRESS
 
-    web3.eth.getBalance(address, (err : Error, wei: Number) => {
-      var balance = web3.utils.fromWei(wei, 'ether')
-      console.log("Balance - " + address + ": " + balance + "ETH");
+    web3.eth.getBalance(address, (err : Error, wei: number) => {
+
+      if (err) 
+      {
+        console.log('ERROR: ' + err.message)
+      }
+      let balance : number = web3.utils.fromWei(wei, 'ether')
+      console.log('Balance - ' + address + ': ' + balance + 'ETH')
     })
   }
 }

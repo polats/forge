@@ -1,26 +1,26 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import * as fs from 'fs'
+import * as path from 'path'
 
-export default class Files {
-
-   static getCurrentDirectoryBase() {
-    return path.basename(process.cwd());
-
+export namespace Files {
+  export function getCurrentDirectoryBase() {
+    return path.basename(process.cwd())
   }
 
-  static fileExists(filePath : string) {
+  export function fileExists(filePath : string) {
     try {
-      return fs.existsSync(filePath);
+      return fs.existsSync(filePath)
     } catch (err) {
-      return false;
+      console.log(err);
+      return false
     }
   }
 
-  static directoryExists(filePath : string) {
+  export function directoryExists(filePath : string) {
     try {
-      return fs.statSync(filePath).isDirectory();
+      return fs.statSync(filePath).isDirectory()
     } catch (err) {
-      return false;
+      console.log(err);
+      return false
     }
   }
 }

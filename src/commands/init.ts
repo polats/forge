@@ -1,6 +1,7 @@
 import Command, {flags} from '@oclif/command'
-import Files from '../files';
-import chalk from 'chalk';
+import chalk from 'chalk'
+import {Files}
+  from '../files'
 
 export class Init extends Command {
   static description = 'Initializes the needed variables such as URLs and API keys'
@@ -23,13 +24,11 @@ hello world from ./src/hello.ts!
 
   async run() {
     if (!Files.fileExists('.env')) {
-      console.log(chalk.yellow("Environment file not found, running 'forge init'."));
-      process.exit();
+      console.log(chalk.yellow("Environment file not found, running 'forge init'."))
+      process.exit()
     }
-
-    else
-    {
-      console.log("Environment file found.");
+    else {
+      console.log('Environment file found.')
     }
   }
 }

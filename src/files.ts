@@ -6,20 +6,20 @@ export namespace Files {
     return path.basename(process.cwd())
   }
 
-  export function fileExists(filePath : string) {
+  export function fileExists(filePath: string) {
     try {
       return fs.existsSync(filePath)
     } catch (err) {
-      console.log(err);
+      console.log(err)
       return false
     }
   }
 
-  export function directoryExists(filePath : string) {
+  export function directoryExists(filePath: string) {
     try {
       return fs.statSync(filePath).isDirectory()
     } catch (err) {
-      console.log(err);
+      console.log(err)
       return false
     }
   }

@@ -26,13 +26,11 @@ hello world from ./src/hello.ts!
     const web3 = new Web3(rpcURL)
     const address = process.env.USER_ADDRESS
 
-    web3.eth.getBalance(address, (err : Error, wei: number) => {
-
-      if (err) 
-      {
+    web3.eth.getBalance(address, (err: Error, wei: number) => {
+      if (err) {
         console.log('ERROR: ' + err.message)
       }
-      let balance : number = web3.utils.fromWei(wei, 'ether')
+      let balance: number = web3.utils.fromWei(wei, 'ether')
       console.log('Balance - ' + address + ': ' + balance + 'ETH')
     })
   }

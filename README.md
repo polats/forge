@@ -1,7 +1,7 @@
 @polats/forge
 =============
 
-Command-line Crypto
+Command-line NPM package for creating cryptoitems
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@polats/forge.svg)](https://npmjs.org/package/@polats/forge)

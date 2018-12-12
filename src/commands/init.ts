@@ -1,5 +1,5 @@
 import Command, {flags} from '@oclif/command'
-import chalk from 'chalk'
+import * as fs from 'fs'
 
 import {Files} from '../files'
 
@@ -25,14 +25,26 @@ hello world from ./src/hello.ts!
   static args = [{name: 'file'}]
 
   async run() {
-    const answers = await inquirer.askEnvInitializationVariables()
-    console.log(answers)
-
-    if (!Files.fileExists('.env')) {
-      console.log(chalk.yellow("Environment file not found, running 'forge init'."))
-      process.exit()
-    } else {
-      console.log('init success.')
+    // Confirm file overwrite
+    if (Files.fileExists('.env')) {
+      const question = 'AskEnvFileOverwrite'
+      const confirm = await inquirer.askEnvFileOverwrite()
+      if (!confirm[question]) {
+        console.log('Aborting.')
+        this.exit()
+      }
     }
+
+    const answers = await inquirer.askEnvInitializationVariables()
+
+    let fileOutput = ''
+    Object.keys(answers).map((key: string) => {
+      fileOutput += (key + '=' + answers[key] + '\n')
+    })
+
+    fs.writeFile('.env', fileOutput, function (err) {
+      if (err) throw err
+      console.log('init success.')
+    })
   }
 }

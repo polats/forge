@@ -1,15 +1,16 @@
 const inquirer = require('inquirer')
+import chalk from 'chalk'
 
 module.exports = {
   askEnvInitializationVariables: () => {
     const questions = [
       {
-        name: 'infuraApiKey',
+        name: 'INFURA_API_KEY',
         type: 'input',
         message: 'Enter your Infura API key:'
       },
       {
-        name: 'infuraRpcServer',
+        name: 'RPC_SERVER',
         type: 'list',
         message: 'Select Infura RPC server:',
         choices: [
@@ -22,11 +23,21 @@ module.exports = {
         default: 'https://ropsten.infura.io/'
       },
       {
-        name: 'ethDevAddress',
+        name: 'USER_ADDRESS',
         type: 'input',
         message: 'Enter ETH wallet address to use:'
       }
     ]
     return inquirer.prompt(questions)
   },
+  askEnvFileOverwrite: () => {
+    const questions = [
+      {
+        name: 'AskEnvFileOverwrite',
+        type: 'confirm',
+        message: chalk.yellow('Existing .env file found. Overwrite?')
+      }
+    ]
+    return inquirer.prompt(questions)
+  }
 }
